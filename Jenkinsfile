@@ -31,7 +31,7 @@ pipeline{
             parallel{
                 stage('test-a'){
                     steps{
-                        sh 'logname'
+                        sh 'date'
                     }
                 }
                 stage('test-b'){
@@ -43,7 +43,7 @@ pipeline{
         }
         stage('check-user'){
             steps{
-                sh 'cat /etc/passwd'
+                sh 'lsblk'
             }
         }
     }
