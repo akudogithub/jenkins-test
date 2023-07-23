@@ -27,5 +27,24 @@ pipeline{
                 sh 'free -m'
             }
         }
+        stage('regression-test1'){
+            parallel{
+                stage('test-1e'){
+                    steps{
+                        sh 'echo "running reg-test 1e'
+                    }
+                }
+                stage('test-1b'){
+                    steps{
+                        sh 'echo "running reg-test 1c'
+                    }
+                }
+            }
+        }
+        stage('check-user'){
+            steps{
+                sh 'cat /etc/passwd'
+            }
+        }
     }
 }
