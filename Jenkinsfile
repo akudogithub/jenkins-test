@@ -16,16 +16,5 @@ pipeline{
                 sh 'bash /var/lib/jenkins/workspace/jenkins-test-pipeline/security.sh'
             }
         }
-        stage('system-check'){
-            steps{
-                sh 'lsblk'
-            }
-        }
-        stage('ram-check'){
-            steps{
-                sh 'free -g'
-                sh 'free -m'
-            }
-        }
     }
 }
