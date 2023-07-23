@@ -27,16 +27,16 @@ pipeline{
                 sh 'free -m'
             }
         }
-        stage('regression-test1'){
+        stage('regression-test'){
             parallel{
-                stage('test-1e'){
+                stage('test-a'){
                     steps{
-                        sh 'echo "running reg-test 1e'
+                        sh 'logname'
                     }
                 }
-                stage('test-1b'){
+                stage('test-b'){
                     steps{
-                        sh 'echo "running reg-test 1c'
+                        sh 'cal'
                     }
                 }
             }
